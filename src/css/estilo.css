@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 body{
     background-color: #e9f9fb;
@@ -65,25 +74,25 @@ nav a:hover {
 /* SLIDESHOW */
 
 .background-slideshow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .background-slideshow img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: fade 2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fade 2s ease-in-out;
 }
 
 @keyframes fade {
-  from { opacity: 0.3; }
-  to { opacity: 1; }
+    from { opacity: 0.3; }
+    to { opacity: 1; }
 }
 
 /* FIM DO CSS DO SLIDESHOW */
@@ -93,25 +102,29 @@ nav a:hover {
 .img-corpotexto{
     display: flex;
     justify-content: center;
-    height: 50vh;
+    height: auto;
 }
 
-main{
+main {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 40px 20px;
     position: relative;
     z-index: 2;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 10vh - 150px);
 }
 
-
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+    padding-bottom: 100px;
 }
 .container article img {
     width: 300px;
@@ -120,7 +133,7 @@ main{
 }
 
 .card-texto{
-    color: #55a8dc;
+    color: #e9f9fb;
     max-width: 600px;
     font-size: 1.5rem;
 }
@@ -150,26 +163,25 @@ footer{
     background-color: #55a8dc;
     position: relative;
     z-index: 2;
-    background-color: #55a8dc;
     padding: 40px 0;
     text-align: center;
     color: white;
 }
 
 .footer-container h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .footer-container hr {
-  width: 70%;
-  border: none;
-  height: 3px;
-  background-color: #e3e3e3;
-  margin: 0 auto 20px;
+    width: 70%;
+    border: none;
+    height: 3px;
+    background-color: #e3e3e3;
+    margin: 0 auto 20px;
 }
 
 .footer-container p {
-  margin: 5px 0;
-  font-size: 16px;
+    margin: 5px 0;
+    font-size: 16px;
 }
