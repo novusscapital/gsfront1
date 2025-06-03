@@ -167,6 +167,9 @@ main {
     padding: 20px;
     border-radius: 20px;
 }
+.cards-sobre p{
+    color: white;
+}
 
 .info-title{
     color: #55a8dc;
@@ -181,6 +184,52 @@ main {
     text-align: left;
     gap: 10px;
 }
+
+/* FIM DO CSS DO SOBRE */
+
+
+/* PRODUTO */
+
+.container section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #e6f9fc;
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    gap: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.container section:nth-of-type(2) .card-titulo {
+    flex: 1 1 100%;
+    background-color: #eaf6ff;
+    color: #008fc9;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.container section:nth-of-type(2) p {
+    flex: 1 1 300px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 10px 0;
+    color: #333;
+}
+
+.container section:nth-of-type(2) img {
+    flex: 1 1 220px;
+    max-width: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* FIM DO CSS DO PRODUTO */
 
 
 /* FOOTER */
