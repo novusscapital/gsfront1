@@ -190,43 +190,50 @@ main {
 
 /* PRODUTO */
 
-.container section:nth-of-type(2) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: #e6f9fc;
-    padding: 40px 30px;
+
+.card-titulo{
+    color: #55a8dc;
+    border: 2px solid white;
+    background-color: white;
     border-radius: 20px;
-    margin-top: 40px;
+    padding: 20px;
+}
+.card-texto{
+    color: #55a8dc;
     gap: 20px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    margin-top: 10px;
 }
-
-.container section:nth-of-type(2) .card-titulo {
-    flex: 1 1 100%;
-    background-color: #eaf6ff;
-    color: #008fc9;
-    padding: 10px 20px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 1.2rem;
+.card-texto p{
+    padding: 20px;
 }
-
-.container section:nth-of-type(2) p {
-    flex: 1 1 300px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 10px 0;
-    color: #333;
+.imagem-sensor img{
+    width: auto;
+    height: 400px;
+    position: relative;
+    z-index: 1; 
 }
-
-.container section:nth-of-type(2) img {
-    flex: 1 1 220px;
-    max-width: 220px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+#display-produto{
+    display: flex;
+}
+.alerta{
+    width: 1000px;
+    background: #C3E7FD;
+    padding: 20px;
+}
+.alerta-texto{
+    font-size: 24px; 
+    color: #55a8dc;
+    line-height: 1.6;
+    margin: 20px 40px;
+    max-width: 100%;
+}
+.centralizar-poste{
+    display: flex;
+    justify-content: space-around;
+}
+.poste{
+    width: auto;
+    height: 700px;
 }
 
 /* FIM DO CSS DO PRODUTO */
@@ -236,6 +243,8 @@ main {
 
 footer{
     background-color: #55a8dc;
+    border: 1px solid #55a8dc;
+    border-radius: 40px;
     position: relative;
     z-index: 2;
     padding: 40px 0;
