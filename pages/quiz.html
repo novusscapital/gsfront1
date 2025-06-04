@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>River Safe - Quiz</title>
-    <link rel="stylesheet" href="../src/css/estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>River Safe - Quiz</title>
+  <link rel="stylesheet" href="../src/css/estilo.css"/>
 </head>
 <body>
-    <div class="page-wrapper">
-        <header>
-            <img src="../src/assets/riversafelogo.png" alt="Logo do site">
-            <img src="../src/assets/treslinhasbrancas.png" alt="Três Linhas Brancas">
-            <nav>
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="./sobre.html">SOBRE</a></li>
-                    <li><a href="./produto.html">PRODUTO</a></li>
-                    <li><a href="./contrate.html">CONTRATE</a></li>
-                    <li><a href="./apoie.html">APOIE-NOS</a></li>
-                    <li><a href="./quiz.html">QUIZ</a></li>
-                </ul>
-            </nav>
-        </header>
-    
-        <main>
-            <div class="container">
-    
-                <div class="card-titulo">
-                    <h1>Agora teste seu conhecimento sobre o assunto</h1>
-                </div>
-    
-                <section id="caixaderesposta">
-                    <article>
-                        <div class="next-question">
-                            <h2>Próxima Pergunta</h2>
-                        </div>
-                    </article>
-                </section>
-    
-                <div class="divisor">
-                    <img src="../src/assets/linhadivisoria.png" alt="linhadivisória">
-                </div>
-    
-            </div>
-        </main>
-    
-        <footer>
-            <div class="divisor">
-                <img src="../src/assets/linhadivisoria.png" alt="linhadivisória">
-            </div>
-    
-            <div class="footer-container">
-                <h2>Fale Conosco</h2>
-                <hr>
-                <p>RiverSafe@gmail.com</p>
-                <p>(11) 92312-1231</p>
-            </div>
-    
-            <div class="social">
-                <div>
-                    <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </footer>
-    </div>
+  <div class="page-wrapper">
 
-    
-    <script src="../src/js/script.js"></script>
+    <header>
+      <div class="logo-container">
+        <img src="../src/assets/riversafelogo.png" alt="Logo do site">
+        <img src="../src/assets/treslinhasbrancas.png" alt="Três Linhas Brancas">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="./sobre.html">SOBRE</a></li>
+          <li><a href="./produto.html">PRODUTO</a></li>
+          <li><a href="./contrate.html">CONTRATE</a></li>
+          <li><a href="./apoie.html">APOIE-NOS</a></li>
+          <li><a href="./quiz.html">QUIZ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+
+        <h1>QUIZ: Você está preparado para agir em caso de enchente?</h1>
+        <p>Responda as perguntas abaixo para testar seus conhecimentos sobre segurança e prevenção em áreas de risco.</p>
+
+        <div class="divisor divisor-rio">
+          <img src="../src/assets/divisordepágina.png" alt="linha divisória">
+        </div>
+
+        <div id="container-perguntas" class="card-1">
+          <p id="pergunta"></p>
+          <input type="text" id="resposta" placeholder="Digite sua resposta">
+          <button id="proximo">Próxima Pergunta</button>
+        </div>
+
+        <div id="container-resultado" class="card-2" style="display: none;">
+          <h2>Respostas do Quiz</h2>
+          <ul id="lista-resultado"></ul>
+          <button onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+        </div>
+
+        <div id="message" style="margin-top: 20px; text-align: center;"></div>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <h2>Fale Conosco</h2>
+        <hr>
+        <p>RiverSafe@gmail.com</p>
+        <p>(11) 92312-1231</p>
+      </div>
+      <div class="social">
+        <div>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../src/js/quiz.js"></script>
 </body>
 </html>
