@@ -406,6 +406,138 @@ body.pagina-quiz nav ul li a[href="quiz.html"]:hover {
   transform: scale(1.07);
 }
 
+/* FORMULÁRIO */
+
+.formulario-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: #eaf6fc;
+}
+
+.formulario-caixa {
+  background-color: white;
+  border: 2px solid #cce7f6;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.formulario-caixa h1 {
+  color: #2a7db8;
+  margin-bottom: 20px;
+}
+
+.grupo-formulario {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.grupo-formulario textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  overflow-y: auto;
+  padding: 8px 10px;
+  border: 2px solid #cce7f6;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.grupo-formulario label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2a7db8;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 2px solid #cce7f6;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+  border-color: #53afe8;
+  outline: none;
+}
+
+.botao-enviar {
+  background-color: #2a7db8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.botao-enviar:hover {
+  background-color: #1e4f91;
+}
+
+.mensagem-sucesso {
+  display: none;
+  color: #5cb85c;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* CÓDIGO DE PERSONALIZAÇÃO */
+
+.tema-cores {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.tema-cores i {
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px;
+  border: 2px solid #e6f6f9;
+  background: #e6f6f9;
+  border-radius: 50%;
+  transition: all 0.3s ease; 
+}
+
+.tema-cores i:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-color: #89cbe1; 
+}
+
+.azul { color: #e6f6f9; }
+.azul-escuro { color: #89cbe1; }
+.azul-claro { color: #b8e0ee; }
+
+.azul:hover {
+  background: #e6f6f9;
+  color: #0f4e66;
+}
+.azul-escuro:hover {
+  background: #89cbe1;
+  color: white;
+}
+.azul-claro:hover {
+  background: #b8e0ee;
+  color: white;
+}
+
 @media (max-width: 768px) {
 
   nav ul {

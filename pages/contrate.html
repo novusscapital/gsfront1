@@ -63,6 +63,42 @@
             </p>
           </div>
         </article>
+
+
+      <div class="formulario-wrapper">
+        <div class="formulario-caixa">
+          <h1>Fale Conosco</h1>
+          <form id="contactForm">
+            <div class="grupo-formulario">
+              <label for="name">Nome Completo</label>
+              <input type="text" id="name" required>
+            </div>
+            
+            <div class="grupo-formulario">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" required>
+            </div>
+            
+            <div class="grupo-formulario">
+              <label for="company">Empresa/Organização</label>
+              <input type="text" id="company">
+            </div>
+            
+            <div class="grupo-formulario">
+              <label for="message">Como podemos ajudar?</label>
+              <textarea id="message" rows="4"></textarea>
+            </div>
+            
+            <button type="button" id="submitBtn" class="botao-enviar">Enviar Solicitação</button>
+            
+            <div class="mensagem-sucesso" id="successMessage">
+              Email enviado com sucesso!
+            </div>
+          </form>
+        </div>
+      </div>
+
+
       </div>
     </main>
 
@@ -83,7 +119,20 @@
     </footer>
 
   </div>
-
   <script src="../src/js/script.js"></script>
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+      // Simula o envio do formulário
+      document.getElementById('successMessage').style.display = 'block';
+      document.getElementById('contactForm').reset();
+      
+      // Opcional: Esconde o formulário após envio
+      setTimeout(() => {
+        document.getElementById('contactForm').style.display = 'none';
+      }, 1000);
+    });
+  </script>
+
 </body>
 </html>

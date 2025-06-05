@@ -69,3 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.querySelectorAll('.tema-cores i').forEach(icon => {
+  icon.addEventListener('click', function() {
+    document.body.style.backgroundColor = this.getAttribute('data-cor');
+    // Opcional: salvar no localStorage
+    localStorage.setItem('temaCor', this.getAttribute('data-cor'));
+  });
+});
+
+// Carregar tema salvo
+if(localStorage.getItem('temaCor')) {
+  document.body.style.backgroundColor = localStorage.getItem('temaCor');
+}
