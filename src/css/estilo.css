@@ -217,6 +217,111 @@ body.pagina-apoie .container article.card-sobre {
   margin-bottom: 50px;
 }
 
+/* QUIZ */
+
+#container-perguntas {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  font-size: 1.2rem;
+}
+
+#container-resposta {
+  margin: 25px 0;
+}
+
+.option-container {
+  display: flex;
+  align-items: center;
+  background-color: #e0f0ff;
+  color: #1e4f91;
+  font-size: 18px;
+  padding: 14px 20px;
+  margin: 12px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.option-container:hover {
+  background-color: #cce4ff;
+  border-color: #1e4f91;
+}
+
+.option-container input[type="radio"] {
+  margin-right: 15px;
+  min-width: 18px;
+  min-height: 18px;
+  cursor: pointer;
+}
+
+.option-container label {
+  cursor: pointer;
+  width: 100%;
+}
+
+#container-resultado {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  font-size: 1.1rem;
+}
+
+#proximo,
+#container-resultado button {
+  background-color: #1e4f91;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#proximo:hover,
+#container-resultado button:hover {
+  background-color: #153a6e;
+}
+
+.quiz-box {
+  background-color: white;
+  width: 100%;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.quiz-box h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1e4f91;
+}
+
+#pergunta {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: left;
+}
+
+#message {
+  color: #e74c3c;
+  margin-top: 15px;
+  min-height: 20px;
+}
+
 /* FOOTER */
 footer {
   width: 100%;

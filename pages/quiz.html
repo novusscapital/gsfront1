@@ -2,9 +2,10 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>River Safe - Quiz</title>
-  <link rel="stylesheet" href="../src/css/estilo.css"/>
+  <link rel="stylesheet" href="../src/css/estilo.css">
+  <link rel="shortcut icon" href="../src/assets/imagemraiotopo.png">
 </head>
 <body>
   <div class="page-wrapper">
@@ -26,32 +27,29 @@
       </nav>
     </header>
 
-    <main>
-      <div class="container">
+  <div id="mensagem-boas-vindas" class="mensagem-boas-vindas">
+    Bem-vindo ao Quiz sobre Segurança em Enchentes!
+    <button onclick="fecharMensagem()">✖</button>
+  </div>
 
-        <h1>QUIZ: Você está preparado para agir em caso de enchente?</h1>
-        <p>Responda as perguntas abaixo para testar seus conhecimentos sobre segurança e prevenção em áreas de risco.</p>
+  <main id="container-quiz">
+    <div class="quiz-box">
+      <h1>VOCÊ ESTÁ PREPARADO PARA UMA ENCHENTE?</h1>
 
-        <div class="divisor divisor-rio">
-          <img src="../src/assets/divisordepágina.png" alt="linha divisória">
-        </div>
+      <section id="container-perguntas">
+        <h2 id="pergunta"></h2>
+        <section id="container-resposta"></section>
+        <button id="proximo">Próxima Pergunta</button>
+        <p id="message"></p>
+      </section>
 
-        <div id="container-perguntas" class="card-1">
-          <p id="pergunta"></p>
-          <input type="text" id="resposta" placeholder="Digite sua resposta">
-          <button id="proximo">Próxima Pergunta</button>
-        </div>
-
-        <div id="container-resultado" class="card-2" style="display: none;">
-          <h2>Respostas do Quiz</h2>
-          <ul id="lista-resultado"></ul>
-          <button onclick="reiniciarQuiz()">Reiniciar Quiz</button>
-        </div>
-
-        <div id="message" style="margin-top: 20px; text-align: center;"></div>
-
+      <div id="container-resultado">
+        <h2>Resultado do Quiz</h2>
+        <ul id="lista-resultado"></ul>
+        <button id="inicio-btn">Reiniciar</button>
       </div>
-    </main>
+    </div>
+  </main>
 
     <footer>
       <div class="footer-container">
@@ -69,8 +67,19 @@
       </div>
     </footer>
 
-  </div>
-
   <script src="../src/js/quiz.js"></script>
+  <script src="../src/js/script.js"></script>
+
+  <script>
+    setTimeout(() => {
+      const msg = document.getElementById("mensagem-boas-vindas");
+      if (msg) msg.remove();
+    }, 2000);
+
+    function fecharMensagem() {
+      const msg = document.getElementById("mensagem-boas-vindas");
+      if (msg) msg.remove();
+    }
+  </script>
 </body>
 </html>
