@@ -1,5 +1,4 @@
 
-//SLIDESHOW
 let imagens = [
     'src/assets/imagemslideshow1.jpg',
     'src/assets/imagemslideshow2.jpg',
@@ -40,8 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-//MENU HAMBURGUER
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
   const hamburguer = document.querySelector('.hamburguer');
   const navMenu = document.querySelector('nav ul');
 
@@ -59,8 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// IDENTIFICA A PÁGINA ATUAL
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const menuLinks = document.querySelectorAll('nav ul li a');
   
