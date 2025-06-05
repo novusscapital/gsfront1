@@ -1,3 +1,5 @@
+
+//SLIDESHOW
 let imagens = [
     'src/assets/imagemslideshow1.jpg',
     'src/assets/imagemslideshow2.jpg',
@@ -36,4 +38,37 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("image")) {
     slideShow();
   }
+});
+
+//MENU HAMBURGUER
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburguer = document.querySelector('.hamburguer');
+  const navMenu = document.querySelector('nav ul');
+
+  const navLinks = document.querySelectorAll('nav ul li a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburguer.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+
+  hamburguer.addEventListener('click', function() {
+    this.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+});
+
+// IDENTIFICA A PÁGINA ATUAL
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const menuLinks = document.querySelectorAll('nav ul li a');
+  
+  menuLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    
+    if (linkPage === currentPage) {
+      link.classList.add('current-page');
+    }
+  });
 });

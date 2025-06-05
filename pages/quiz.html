@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../src/css/estilo.css">
   <link rel="shortcut icon" href="../src/assets/imagemraiotopo.png">
 </head>
-<body>
+<body class="pagina-quiz">
   <div class="page-wrapper">
 
     <header>
@@ -16,7 +16,7 @@
         <img src="../src/assets/treslinhasbrancas.png" alt="Três Linhas Brancas">
       </div>
       <nav>
-        <ul>
+        <ul class="header-menu">
           <li><a href="../index.html">HOME</a></li>
           <li><a href="./sobre.html">SOBRE</a></li>
           <li><a href="./produto.html">PRODUTO</a></li>
@@ -25,12 +25,14 @@
           <li><a href="./quiz.html">QUIZ</a></li>
         </ul>
       </nav>
-    </header>
 
-  <div id="mensagem-boas-vindas" class="mensagem-boas-vindas">
-    Bem-vindo ao Quiz sobre Segurança em Enchentes!
-    <button onclick="fecharMensagem()">✖</button>
-  </div>
+      <div class="hamburguer">
+          <span class="barra"></span>
+          <span class="barra"></span>
+          <span class="barra"></span>
+      </div>
+
+    </header>
 
   <main id="container-quiz">
     <div class="quiz-box">
@@ -67,19 +69,21 @@
       </div>
     </footer>
 
-  <script src="../src/js/quiz.js"></script>
-  <script src="../src/js/script.js"></script>
+    
+    <!-- CHAMANDO O SCRIPT -->
+    <script src="../src/js/quiz.js"></script>
+    <script src="../src/js/script.js"></script>
 
-  <script>
-    setTimeout(() => {
-      const msg = document.getElementById("mensagem-boas-vindas");
-      if (msg) msg.remove();
-    }, 2000);
-
-    function fecharMensagem() {
-      const msg = document.getElementById("mensagem-boas-vindas");
-      if (msg) msg.remove();
-    }
-  </script>
+    <script>
+      setTimeout(() => {
+        const msg = document.getElementById("mensagem-boas-vindas");
+        if (msg) msg.remove();
+      }, 2000);
+      
+      function fecharMensagem() {
+        const msg = document.getElementById("mensagem-boas-vindas");
+        if (msg) msg.remove();
+      }
+      </script>
 </body>
 </html>
