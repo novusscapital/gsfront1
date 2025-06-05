@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <body class="index"></body>
   <div class="page-wrapper">
 
+    <!-- CABEÇALHO -->
     <header>
       <div class="logo-container">
         <img src="./src/assets/riversafelogo.png" alt="Logo do site" />
@@ -27,21 +29,24 @@
       </nav>
     </header>
 
+    <!-- SLIDESHOW + LOGO SOBREPOSTA -->
     <div class="background-slideshow">
       <img id="image" src="src/assets/imagemslideshow1.jpg" alt="Slideshow" />
-      <img class="rio" src="./src/assets/riversafe.png" alt="imagem logo no corpo do texto" style="max-width: 300px; width: 90%;" />
+      <div class="logo-sobreposta">
+        <img src="./src/assets/riversafe.png" alt="River Safe Logo" />
+      </div>
     </div>
 
-
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
       <div class="container">
 
         <article class="card-1">
-          <img class="imagem-card" src="./src/assets/sobrenosazul.png" alt="icone do sobre nós" />
+          <img class="imagem-card" src="./src/assets/sobrenosazul.png" alt="ícone sobre nós" />
           <div class="card-texto">
             <h1>SOBRE NÓS</h1>
             <p>
-              Descubra mais sobre a causa ao qual lutamos e sobre o nosso compromisso com nossos clientes.
+              Somos movidos por um propósito: proteger vidas. A RiverSafe nasceu para oferecer tecnologia simples e acessível a comunidades que sofrem com enchentes frequentes. Com monitoramento inteligente, levamos segurança onde ela mais importa.
             </p>
           </div>
         </article>
@@ -50,18 +55,18 @@
           <div class="card-texto">
             <h1>NOSSO PRODUTO</h1>
             <p>
-              Conheça nosso dispositivo leve e compacto para o monitoramento de rios - fácil de instalar e ideal para prevenir transbordamento com segurança. Descubra como ele funciona e como instalá-lo de forma eficiente na margem do rio.
+              Desenvolvemos sensores que detectam em tempo real o nível dos rios e enviam alertas imediatos. Nosso sistema funciona mesmo sem internet e pode ser instalado em qualquer local ribeirinho. É prevenção prática, eficaz e de baixo custo.
             </p>
           </div>
-          <img class="imagem-card" src="./src/assets/nossoproduto.png" alt="icone do nosso produto" />
+          <img class="imagem-card" src="./src/assets/nossoproduto.png" alt="ícone nosso produto" />
         </article>
 
         <article class="card-3">
-          <img class="imagem-card" src="./src/assets/noscontrate.png" alt="icone do nos contrate" />
+          <img class="imagem-card" src="./src/assets/noscontrate.png" alt="ícone nos contrate" />
           <div class="card-texto">
             <h1>NOS CONTRATE</h1>
             <p>
-              Nossa startup desenvolve soluções inteligentes para monitorar áreas de risco, melhorar o escoamento da água e evitar enchentes. Com tecnologia, dados e ação local, ajudamos comunidades a se prepararem antes que o pior aconteça. Contrate agora e transforme prevenção.
+              Prefeituras, ONGs e empresas podem fazer parte dessa transformação. Com nossa tecnologia de alerta, oferecemos suporte completo desde a instalação até o monitoramento. Juntos, podemos salvar vidas e reduzir os impactos das enchentes.
             </p>
           </div>
         </article>
@@ -69,6 +74,7 @@
       </div>
     </main>
 
+    <!-- RODAPÉ -->
     <footer>
       <div class="footer-container">
         <h2>Fale Conosco</h2>
@@ -85,6 +91,7 @@
 
   </div>
 
+  <!-- SCRIPT SLIDESHOW -->
   <script src="src/js/script.js"></script>
 </body>
 </html>

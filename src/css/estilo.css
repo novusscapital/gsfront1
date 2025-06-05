@@ -1,46 +1,47 @@
+/* CONFIG INICIAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
-    font-size: 14px;
+html {
+  font-size: 14px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #e6f7fc;
-    color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e6f7fc;
+  color: #333;
 }
 
-.page-wrapper{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-main{
-    flex: 1;
-    position: relative;
+main {
+  flex: 1;
+  position: relative;
 }
 
+/* HEADER */
 header {
-    height: 150px;
-    overflow: hidden;
-    background-color: #53afe8;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  height: 80px;
+  padding: 0 24px;
+  background-color: #53afe8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
 }
 
 .logo-container {
@@ -51,13 +52,14 @@ header {
 }
 
 .logo-container img:first-child {
-  height: 300px;
+  max-height: 100%;
   width: auto;
-  
+  transform: scale(1.6);
+  transform-origin: left center;
 }
 
 .logo-container img:last-child {
-  height: 100px;
+  height: 40px;
   width: auto;
 }
 
@@ -77,80 +79,115 @@ nav ul {
 nav ul li a {
   padding: 8px 16px;
   background-color: #e0f5ff;
-  border-radius: 10px;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
   color: #2a7db8;
   font-size: 14px;
+  transition: all 0.2s ease;
+  display: inline-block;
 }
 
 nav ul li a:hover {
   background-color: #cdeeff;
+  transform: scale(1.07);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* SLIDESHOW */
-
-.background-slideshow {
-    position: relative;
-    width: 100%;
-    min-height: 500px;
-    overflow: hidden;
+/* SLIDESHOW (HOME) */
+body.index .background-slideshow {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.background-slideshow img {
+body.index .background-slideshow img {
   width: 100%;
-  height: auto;
+  height: 100vh;
+  object-fit: cover;
   display: block;
 }
 
-.background-slideshow .rio{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    max-width: 20000px !important;
-    width: auto;
-    height: auto;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.74));
+body.index .logo-sobreposta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
 }
 
-/* MAIN */
-
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
+body.index .logo-sobreposta img {
+  max-width: 60%;
+  height: auto;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
 }
 
-.card-1, .card-2, .card-3 {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 40px 0;
-    margin-bottom: 60px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 2;
+/* CARD BASE */
+.card-sobre,
+.card-1,
+.card-2,
+.card-3 {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 40px auto;
+  border: 2px solid #cce7f6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.card-sobre:hover,
+.card-1:hover,
+.card-2:hover,
+.card-3:hover {
+  transform: scale(1.01);
+}
+
+.card-sobre h1,
+.card-1 h1,
+.card-2 h1,
+.card-3 h1 {
+  color: #2a7db8;
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.card-sobre p,
+.card-1 p,
+.card-2 p,
+.card-3 p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* HOME - CARDS COM IMAGEM LADO ESQUERDO */
+.card-1,
+.card-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: left;
 }
 
 .card-1 img,
-.card-2 img,
 .card-3 img {
-  max-width: 300px;
+  max-width: 280px;
   width: 100%;
   border-radius: 10px;
-  margin: 60px 0;
-}
-
-.card-3{
-    margin-bottom: 30px;
 }
 
 .card-texto {
@@ -158,56 +195,38 @@ nav ul li a:hover {
   text-align: left;
 }
 
-h1, h2 {
-  font-size: 22px;
-  color: #2a7db8;
-  font-weight: 700;
-  margin-bottom: 10px;
+/* PRODUTO.HTML */
+body.pagina-produto .card-1,
+body.pagina-produto .card-3 {
+  flex-direction: row;
+  text-align: left;
 }
 
-p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
+body.pagina-produto .card-texto {
+  text-align: left;
 }
 
-.divisor-rio {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    z-index: 1;
+/* CONTRATE.HTML - DEIXAR COMO CENTRALIZADO COMUM */
+body.pagina-contrate .card-sobre h1,
+body.pagina-contrate .card-sobre p {
+  text-align: center;
 }
 
-.divisor-rio:nth-of-type(1) {
-  top: 0;
-}
-
-.divisor-rio:nth-of-type(2) {
-  top: 50%;
-}
-
-.divisor-rio:nth-of-type(3) {
-  top: 100%;
-}
-
-.divisor-rio img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
+/* APOIE.HTML - APENAS SEPARAR MELHOR OS CARDS */
+body.pagina-apoie .container article.card-sobre {
+  margin-bottom: 50px;
 }
 
 /* FOOTER */
-
 footer {
-    width: 100%;
-    margin-top: auto;
-    background-color: #53afe8;
-    padding: 30px 20px;
-    text-align: center;
-    color: white;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+  width: 100%;
+  margin-top: auto;
+  background-color: #53afe8;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 footer p {
@@ -215,10 +234,9 @@ footer p {
 }
 
 .footer-container {
-    margin-bottom: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .social a {
@@ -231,20 +249,12 @@ footer p {
   opacity: 0.7;
 }
 
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  nav ul {
-    justify-content: center;
-  }
-
   .card-1,
   .card-2,
-  .card-3 {
+  .card-3,
+  .card-sobre {
     flex-direction: column;
     text-align: center;
   }
@@ -252,33 +262,23 @@ footer p {
   .card-texto {
     text-align: center;
   }
+
+  nav ul {
+    justify-content: center;
+  }
 }
 
-@media (max-width: 480px) {
-  nav ul li a {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
+body.index .background-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-  h1 {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  .card-1 img,
-  .card-2 img,
-  .card-3 img {
-    max-width: 90%;
-  }
-
-  .logo-container img:first-child {
-    height: 70px;
-  }
-
-  .logo-container img:last-child {
-    height: 35px;
-  }
+body.index .background-slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
